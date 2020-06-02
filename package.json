@@ -1,0 +1,83 @@
+{
+  "name": "fureverfamily-front",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.10.0",
+    "@material-ui/icons": "^4.9.1",
+    "@storybook/react": "^5.3.19",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/aws-sdk": "^2.7.0",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^12.12.42",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "aws-cloudfront-invalidate": "^0.1.3",
+    "aws-sdk": "^2.683.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.1",
+    "typescript": "^3.9.3"
+  },
+  "devDependencies": {
+    "@aws-cdk/aws-certificatemanager": "^1.41.0",
+    "@aws-cdk/aws-cloudfront": "^1.41.0",
+    "@aws-cdk/aws-lambda": "^1.41.0",
+    "@aws-cdk/aws-lambda-event-sources": "^1.41.0",
+    "@aws-cdk/aws-route53": "^1.41.0",
+    "@aws-cdk/aws-route53-targets": "^1.41.0",
+    "@aws-cdk/aws-s3-deployment": "^1.41.0",
+    "@aws-cdk/core": "^1.41.0",
+    "@mobileposse/auto-delete-bucket": "^1.28.0",
+    "@types/aws-lambda": "^8.10.51",
+    "aws-cdk": "^1.24.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "lint:cdk": "eslint 'cdk/**/*.ts' --max-warnings 0",
+    "lint": "npm-run-all lint:src lint:cdk",
+    "prelint": "tsc --noEmit",
+    "lint:src": "eslint 'src/**/*.ts' --max-warnings 0",
+    "prelint:cdk": "tsc -p ./cdk --noEmit",
+    "cdk": "cdk",
+    "cdk:build": "tsc -p ./cdk",
+    "cdk:bootstrap": "cdk bootstrap",
+    "cdk:synth": "npm run cdk:build && cdk synth",
+    "cdk:diff": "npm run cdk:build && cdk diff || exit 0",
+    "cdk:deploy": "cdk deploy --require-approval never",
+    "cdk:destroy": "cdk destroy --force",
+    "deploy": "npm-run-all cdk:build cdk:bootstrap cdk:deploy",
+    "deploy:all": "npm-run-all build deploy"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "bit": {
+    "env": {},
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0",
+    "styles-components": ">=4.0.0",
+    "@storybook/react": ">=5.2.0"
+  }
+}

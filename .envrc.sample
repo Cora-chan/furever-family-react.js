@@ -1,0 +1,20 @@
+export APP_NAME=${PWD##*/}
+export BRANCH=`git branch | grep \* | cut -d ' ' -f2`
+export ROOT_DOMAIN=myfurever.family
+export DOMAIN_PREFIX=secure
+
+export S3_DEPLOYMENT_BUCKET=fureverfamily-builds-bucket
+
+# Your user id in GitLab
+export STAGE=gregturner
+
+# standard AWS vars
+export AWS_REGION=us-east-1
+export AWS_ACCESS_KEY_ID=xx
+export AWS_SECRET_ACCESS_KEY=xx
+
+export CDK_DEFAULT_ACCOUNT=999999999999
+export CDK_DEFAULT_REGION=us-east-1
+
+export LOG_LEVEL=debug
+
