@@ -1,0 +1,83 @@
+image: node:latest
+
+variables:
+  APP_NAME: ${CI_PROJECT_NAME}
+  BRANCH: ${CI_COMMIT_REF_SLUG}
+  DOMAIN_PREFIX: secure
+  ROOT_DOMAIN: myfurever.family
+  STAGE: ${GITLAB_USER_LOGIN}
+  LOG_LEVEL: debug
+
+stages:
+  - setup
+  - validate
+  - deploy
+  - cleanup
+
+cache:
+  paths:
+    - node_modules/
+    - build/
+
+setup:
+  stage: setup
+  script:
+    - npm i
+
+#audit:
+#  stage: validate
+#  except:
+#    - master
+#  dependencies:
+#    - setup
+#  allow_failure: false
+#  script:
+#    - npm audit --production
+
+lint:
+  stage: validate
+  except:
+    - master
+  dependencies:
+    - setup
+  script:
+    - npm run lint
+
+unit_tests:
+  stage: validate
+  except:
+    - master
+    - tags
+    - /^v(\d+).(\d+).(\d+)$/
+  only:
+    - branches
+  dependencies:
+    - setup
+  allow_failure: false
+  coverage: '/All files.*?(\d+(?:\.\d+)?)%/'
+  script:
+    - npm run test
+
+deploy:
+  stage: deploy
+  dependencies:
+    - unit_tests
+  only:
+    - branches
+  allow_failure: false
+  environment:
+    name: dev
+  variables:
+    NODE_ENV: development
+    LOG_LEVEL: debug
+  script:
+    - npm run build
+    - npm run deploy
+
+cleanup:
+  stage: cleanup
+  script:
+    - npm run cdk:build
+    - npm run cdk:destroy
+  when: manual
+
