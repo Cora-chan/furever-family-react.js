@@ -6,15 +6,15 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     '& > *': {
-      margin:"auto",
-     // padding:
-     width: '54%',
-     height:'27%',
+     margin:"auto",
+     padding:"0px",
+     width: '153px',
+     height:'153px',
     //borderRadius:"50%",
     //maxWidth: 360,
      display:"felx",
     //flexDirection: "column",
-     position: "absolute",
+     position: "fixed",
 	  // marginLeft: `20px`,
 	  // marginTop: `100px`,
 	   top: "30%",
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ImageAvatars() {
+export default function ImageAvatar() {
   const classes = useStyles();
 
   return (

@@ -12,8 +12,8 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     display:"felx",
     flexDirection: "column",
-    position: `absolute`,
-	bottom: `20%`,
+    position: `fixed`,
+	  bottom: `20%`,
     left: `0`,
     textAlign: "center",
 
