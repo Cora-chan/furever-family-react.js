@@ -1,9 +1,10 @@
 import React from 'react';
 import { render} from '@testing-library/react';
-import App from './App';
+
+import Dashboard from './pages/Dashboard';
 
 test('renders learn react link', () => {
-  const { getByText } = render(<App />);
+  const { getByText } = render(<Dashboard />);
   const linkElement = getByText(/home/i);
   
   expect(linkElement).toBeInTheDocument();
