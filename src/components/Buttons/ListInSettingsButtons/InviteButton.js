@@ -26,7 +26,7 @@ export default function InviteButton() {
       color:"#ffffff",
       
       }}>
-      Invite friends/familly
+      Invite friends/family
     </Button>
   );
 }
