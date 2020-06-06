@@ -1,16 +1,18 @@
 import React from "react"
 
-import ImageAvater from "../components/ImageAvater"
+
+
+import ImageAvatar from "../components/ImageAvatar"
 import SimpleBottomNavigation from "../components/SimpleBottomNavigation"
 import SettingButton from "../components/SettingButton"
-import ListDividers from "../components/ListDividers"
+import ListDividers from "../components/Lists/ListDividers"
 
 function Dashboard(){
     return(
 <div>
         
         <SettingButton />
-        <ImageAvater />
+        <ImageAvatar />
         <ListDividers />
         <SimpleBottomNavigation />
         

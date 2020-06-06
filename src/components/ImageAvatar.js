@@ -8,8 +8,8 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
      margin:"auto",
      padding:"0px",
-     width: '153px',
-     height:'153px',
+     width: '300px',
+     height:'300px',
     //borderRadius:"50%",
     //maxWidth: 360,
      display:"felx",

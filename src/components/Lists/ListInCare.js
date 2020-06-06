@@ -2,10 +2,12 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import VetButton from "./Buttons/ListInHealthButtons/VetButton"
-import VacinationButton from "./Buttons/ListInHealthButtons/VacinationButton"
-import MedicationsButton from "./Buttons/ListInHealthButtons/MedicationsButton"
-import ConditionsButton from "./Buttons/ListInHealthButtons/ConditionsButton"
+import GamesButton from "../Buttons/ListInCareButtons/GamesButton"
+import GroomingButton from "../Buttons/ListInCareButtons/GroomingButton"
+import MealsButton from "../Buttons/ListInCareButtons/MealsButton"
+import PhotosButton from "../Buttons/ListInCareButtons/PhotosButton"
+import ThreatsButton from "../Buttons/ListInCareButtons/ThreatsButton"
+import WalksButton from "../Buttons/ListInCareButtons/WalksButton"
 
 
 
@@ -19,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     _overflow:"auto",
     margin:"0 0 0 0",
     padding:"0 0 0 0",
-    bottom:"-10px",
+    bottom:"-70px",
     position:"relative",
     maxHeight:"auto",
     backgroundColor: theme.palette.background.paper,
@@ -28,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-export default function ListInHealth() {
+export default function ListInCare() {
   const classes = useStyles();
 
   return (
@@ -36,16 +38,22 @@ export default function ListInHealth() {
       
       <List >
         <ListItem  >
-          <VetButton />
+          <WalksButton />
         </ListItem>
         <ListItem >
-          <MedicationsButton />
+          <GamesButton/>
         </ListItem>
         <ListItem >
-          <ConditionsButton />
+          <ThreatsButton />
         </ListItem>
         <ListItem >
-          <VacinationButton />
+          <MealsButton />
+        </ListItem>
+        <ListItem >
+          <GroomingButton />
+        </ListItem>
+        <ListItem >
+          <PhotosButton />
         </ListItem>
         
       </List>

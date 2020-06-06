@@ -1,4 +1,6 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
 import {makeStyles} from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
@@ -27,6 +29,7 @@ const useStyles = makeStyles({
 export default function SimpleBottomNavigation() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
+  //const preventDefault = (event) => event.preventDefault();
 
   return (
     <BottomNavigation
@@ -38,16 +41,20 @@ export default function SimpleBottomNavigation() {
       className={classes.root}
       
     >
+
       
     <BottomNavigationAction 
+    component={ Link } to="/"
       
       label={<Button 
+        
         style={{
           color: "#ffffff",
           textTransform:"capitalize"    
         }}>
           Home
        </Button>}
+      
       icon={<HomeIcon 
         style={{
           color: "#ffffff",
@@ -56,11 +63,14 @@ export default function SimpleBottomNavigation() {
     }} ></HomeIcon>}  />
 
       <BottomNavigationAction 
+      component={ Link } to="/care"
       label={<Button 
          style={{
          color: "#ffffff",
          textTransform:"capitalize" 
-     }}>Care
+     }}>
+       Care
+       
      </Button>} 
       icon={<EventNoteIcon style={{
         color: "#ffffff",
@@ -68,20 +78,35 @@ export default function SimpleBottomNavigation() {
         height:`24px`,
     }} ></EventNoteIcon>} />
 
+
       <BottomNavigationAction 
+
+      
+      component={ Link } to="/health"
       label={<Button 
+       
          style={{
          color: "#ffffff",
          textTransform:"capitalize" 
-     }}>Health</Button>} 
-      icon={<InfoIcon style={{
+     }}>
+       
+       Health
+       
+         </Button>} 
+     
+      icon={<InfoIcon 
+        
+        style={{
        // borderRadius: 35,
           color: "#ffffff",
           width:`24px`,
           height:`24px`,
       //  padding: "18px 36px",
       //  fontSize: "18px"
-    }} ></InfoIcon>} />
+    }} 
+    
+    ></InfoIcon>} />
     </BottomNavigation>
+    
   );
 }

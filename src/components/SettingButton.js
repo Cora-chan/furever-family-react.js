@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import SettingsIcon from '@material-ui/icons/Settings';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,6 +24,7 @@ export default function SettingButton() {
   return (
     <div className={classes.root}>
       <Button 
+      component={ Link } to="/settings"
       variant="contained" 
       style={{
        // borderRadius: 35,

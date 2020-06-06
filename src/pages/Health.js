@@ -1,9 +1,10 @@
 import React from "react"
+
 import ChartExample from"../components/ChartExample"
-import SimpleHeader from"../components/SimpleHeader"
+import SimpleHeader from"../components/Headers/SimpleHeader"
 import SimpleBottomNavigation from "../components/SimpleBottomNavigation"
 import SettingButton from "../components/SettingButton"
-import ListInHealth from "../components/ListInHealth"
+import ListInHealth from "../components/Lists/ListInHealth"
 
 
 function Health(){
@@ -12,7 +13,7 @@ function Health(){
         
         <SettingButton />
         <SimpleHeader />
-        <ChartExample />
+        <ChartExample  />
         <ListInHealth />
         <SimpleBottomNavigation />
         
