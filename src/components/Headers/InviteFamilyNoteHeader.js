@@ -7,8 +7,8 @@ const useStyles = makeStyles({
     width: '100%',
     
     maxWidth: 500,
-    padding:"100px 0px 0px 0px",
-    textIndent:"8%"
+    padding:"20px 0px 0px 12px",
+    textIndent:"5%"
     
     
   },
@@ -16,18 +16,18 @@ const useStyles = makeStyles({
 
 
 
-export default function SettingsHeader() {
+export default function InviteFamilyHeader() {
   const classes = useStyles();  
 
 return(
   <div className={classes.root}>
     <Typography variant="h3" style={{
             color: "#454F63",
-            fontSize:`40px`,
+            fontSize:`15px`,
             fontFamily:"sans-serif"
              
         }} >
-           Settings
+           Please accept this invitation to our pet family
       </Typography>
     </div>
   );

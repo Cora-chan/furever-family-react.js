@@ -7,8 +7,8 @@ const useStyles = makeStyles({
     width: '100%',
     
     maxWidth: 500,
-    padding:"100px 0px 0px 0px",
-    textIndent:"8%"
+    padding:"70px 0px 0px 0px",
+    textIndent:"5%"
     
     
   },
@@ -16,7 +16,7 @@ const useStyles = makeStyles({
 
 
 
-export default function SettingsHeader() {
+export default function InviteFamilyHeader() {
   const classes = useStyles();  
 
 return(
@@ -27,7 +27,7 @@ return(
             fontFamily:"sans-serif"
              
         }} >
-           Settings
+           Invite to Family
       </Typography>
     </div>
   );
