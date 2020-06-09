@@ -20,11 +20,11 @@ export default function ManagepetsButton() {
     variant="contained" 
     
     style=
-    {{
+    {{textAlign:"center",
+      padding:"10px 0 0 0",
       width:"279px",
       height:"44px",
       color:"#ffffff",
-      
       }}>
       Manage Pets
     </Button>

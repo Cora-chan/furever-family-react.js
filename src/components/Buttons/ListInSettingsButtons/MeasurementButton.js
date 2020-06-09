@@ -20,11 +20,11 @@ export default function MeasurementButton() {
     variant="contained" 
     
     style=
-    {{
+    {{textAlign:"center",
+      padding:"0 0 0 0",
       width:"279px",
       height:"44px",
       color:"#ffffff",
-      
       }}>
       Measurement units
     </Button>

@@ -20,11 +20,11 @@ export default function ConditionsButton() {
     variant="contained" 
     
     style=
-    {{
+    {{textAlign:"center",
+      padding:"0px 0 0 0",
       width:"279px",
       height:"44px",
       color:"#ffffff",
-      
       }}>
       Conditions
     </Button>

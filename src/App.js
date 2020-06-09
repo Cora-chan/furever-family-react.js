@@ -10,6 +10,7 @@ import Health from "./pages/Health"
 import Care from "./pages/Care"
 import Settings from "./pages/Settings"
 import Invitation from "./pages/Invitation"
+import InvitationModal from "./components/Modals/InvitationModal"
 
 
 
@@ -24,6 +25,7 @@ class App extends Component{
             <Route exact path="/care" component={Care} />
             <Route exact path="/settings" component={Settings} />
             <Route exact path="/invitation" component={Invitation} />
+            <Route exact path="/invitation-successful" component={InvitationModal} />
             </Switch>
         </Router>
 

@@ -29,7 +29,7 @@ export default function SendButton() {
       color:"#ffffff",
       
       }}>
-      Send 
+      Send Invite
     </Button>
   );
 }

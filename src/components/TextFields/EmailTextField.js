@@ -21,7 +21,7 @@ export default function EmailTextField() {
 
   return (
     <form className={classes.root} noValidate autoComplete="off">     
-      <TextField id="outlined-basic" label="Email" variant="outlined" />
+      <TextField id="outlined-basic" label="Email" variant="outlined"  />
     </form>
   );
 }
