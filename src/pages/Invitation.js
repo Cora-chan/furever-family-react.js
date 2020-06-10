@@ -1,6 +1,6 @@
 import React from "react"
 import BackButton from "../components/Buttons/InvitationButtons/BackButton"
-import EmailTextField from "../components/TextFields/EmailTextField"
+import EmailTextField from "../components/Inputs/EmailTextField"
 import InviteFamilyHeader from "../components/Headers/InviteFamilyHeader"
 import InviteFamilyNoteHeader from "../components/Headers/InviteFamilyNoteHeader"
 import SendButton from "../components/Buttons/InvitationButtons/SendButton"

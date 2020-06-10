@@ -11,6 +11,7 @@ import Care from "./pages/Care"
 import Settings from "./pages/Settings"
 import Invitation from "./pages/Invitation"
 import InvitationModal from "./components/Modals/InvitationModal"
+import AddPets from "./pages/AddPets"
 
 
 
@@ -26,6 +27,7 @@ class App extends Component{
             <Route exact path="/settings" component={Settings} />
             <Route exact path="/invitation" component={Invitation} />
             <Route exact path="/invitation-successful" component={InvitationModal} />
+            <Route exact path="/add/pets" component={AddPets} />
             </Switch>
         </Router>
 
