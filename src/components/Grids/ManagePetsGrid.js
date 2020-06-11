@@ -27,7 +27,7 @@ export default function ManagePetsGrid() {
       <Paper className={classes.paper}>
             <Grid container spacing={3}>
                 <Grid item xs>
-                    <Avatar variant="square" className={classes.img} alt="complex" src={require("D:/Furever_Family_Project_all/fureverfamily-front-master_June_2nd/fureverfamily-front-master/src/assets/avatar_sample.png")} />   
+                    <Avatar variant="square" className={classes.img} alt="complex" src={require("../Grids/avatar_sample.png")} />   
                  </Grid>
                  <Grid item xs={7} container direction="column" spacing={2}>
                     <Grid item xs>  
