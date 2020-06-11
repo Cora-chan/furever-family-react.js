@@ -22,7 +22,7 @@ export default function CancelButton() {
     <Button 
     className={classes.root}
     variant="contained" 
-    component={ Link } to="/settings"
+    component={ Link } to="/manage/pets"
     style=
     {{
       width:"150px",

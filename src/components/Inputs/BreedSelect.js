@@ -32,6 +32,7 @@ export default function BreedSelect() {
             width:"34ch",}}
             >Breed</InputLabel>
         <Select
+          
           style=
           {{margin: "10px 0px 0px 10px",
               width:"31ch",}}

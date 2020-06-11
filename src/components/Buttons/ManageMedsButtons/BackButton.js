@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     return (
       <div className={classes.root}>
         <IconButton
-        component={ Link } to="/manage/pets">
+        component={ Link } to="/settings">
           <ArrowBackIcon 
           />
         </IconButton>
