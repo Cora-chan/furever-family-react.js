@@ -2,9 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import InviteButton from "../Buttons/ListInSettingsButtons/InviteButton"
-import ManagepetsButton from  "../Buttons/ListInSettingsButtons/ManagepetsButton"
-import MeasurementButton from "../Buttons/ListInSettingsButtons/MeasurementButton"
+import {Link} from "react-router-dom"
+import ContainedButtonLarge from "../Buttons/ContainedButtonLarge"
+
 
 
 
@@ -36,13 +36,13 @@ export default function ListInSettings() {
       
       <List >
         <ListItem  >
-          <InviteButton />
+          <ContainedButtonLarge caption="Manage Pets" component={Link}to="/manage/pets" />
         </ListItem>
         <ListItem >
-          <ManagepetsButton/>
+        <ContainedButtonLarge caption="Invite friends/family" component={Link}to="/create-an-invite"/>
         </ListItem>
         <ListItem >
-          <MeasurementButton />
+        <ContainedButtonLarge caption="Measurement Units" />
         </ListItem>
       </List>
     </div>

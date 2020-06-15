@@ -2,12 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import GamesButton from "../Buttons/ListInCareButtons/GamesButton"
-import GroomingButton from "../Buttons/ListInCareButtons/GroomingButton"
-import MealsButton from "../Buttons/ListInCareButtons/MealsButton"
-import PhotosButton from "../Buttons/ListInCareButtons/PhotosButton"
-import ThreatsButton from "../Buttons/ListInCareButtons/ThreatsButton"
-import WalksButton from "../Buttons/ListInCareButtons/WalksButton"
+import ContainedButtonLarge from "../Buttons/ContainedButtonLarge"
 
 
 
@@ -38,22 +33,22 @@ export default function ListInCare() {
       
       <List >
         <ListItem  >
-          <WalksButton />
+          <ContainedButtonLarge caption="Walks" />
         </ListItem>
         <ListItem >
-          <GamesButton/>
+        <ContainedButtonLarge caption="Games" />
         </ListItem>
         <ListItem >
-          <ThreatsButton />
+        <ContainedButtonLarge caption="Treats" />
         </ListItem>
         <ListItem >
-          <MealsButton />
+        <ContainedButtonLarge caption="Meals" />
         </ListItem>
         <ListItem >
-          <GroomingButton />
+        <ContainedButtonLarge caption="Grooming" />
         </ListItem>
         <ListItem >
-          <PhotosButton />
+        <ContainedButtonLarge caption="Photos" />
         </ListItem>
         
       </List>

@@ -1,22 +1,23 @@
 import React from "react"
-import BackButton from "../components/Buttons/InvitationButtons/BackButton"
+
+import {Link} from "react-router-dom"
+import IconButtonBack from "../components/Buttons/IconButtonBack"
 import EmailTextField from "../components/Inputs/EmailTextField"
 import InviteFamilyHeader from "../components/Headers/InviteFamilyHeader"
 import InviteFamilyNoteHeader from "../components/Headers/InviteFamilyNoteHeader"
-import SendButton from "../components/Buttons/InvitationButtons/SendButton"
-import CancelButton from "../components/Buttons/InvitationButtons/CancelButton"
-
+import ContainedButtonCancel from "../components/Buttons/ContainedButtonCancel"
+import ContainedButtonMedium from "../components/Buttons/ContainedButtonMedium"
 
 function Invitation(){
     return(
 <div>
         
-        <BackButton />
+        <IconButtonBack component={Link}to="/health"/>
         <InviteFamilyHeader />
         <EmailTextField />
         <InviteFamilyNoteHeader />
-        <SendButton />
-        <CancelButton />
+        <ContainedButtonCancel color="error" caption="Cancel" component={Link}to="/settings"  />
+        <ContainedButtonMedium color="green" caption="Send Invite" component={Link}to="/invite-success"  />
        
 </div>
 

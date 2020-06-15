@@ -1,7 +1,7 @@
 import React from "react"
 import ListInSettings from "../components/Lists/ListInSettings"
 import SettingsHeader from "../components/Headers/SettingsHeader"
-import SettingButton from "../components/SettingButton"
+import SettingButton from "../components/Buttons/SettingButton"
 import SimpleBottomNaviagtion from "../components/SimpleBottomNavigation"
 
 

@@ -1,18 +1,19 @@
 import React from "react";
+import IconButtonBack from "../components/Buttons/IconButtonBack"
+import {Link} from "react-router-dom"
 import ManagePetsMedsGrid from "../components/Grids/ManagePetsGrid"
 import ManageMedsHeader from "../components/Headers/ManageMedsHeader"
-import BackButton from "../components/Buttons/ManageMedsButtons/BackButton"
-import AddButton from "../components/Buttons/ManageMedsButtons/AddButton"
-import CancelButton from "../components/Buttons/ManageMedsButtons/CancelButton"
+import ContainedButtonCancel from "../components/Buttons/ContainedButtonCancel"
+import ContainedButtonMedium from "../components/Buttons/ContainedButtonMedium"
 
 function ManagePets(){
     return(
 <div>
-        <BackButton/>
+        <IconButtonBack component={Link}to="/health"/>
         <ManageMedsHeader/>
         <ManagePetsMedsGrid/>
-        <AddButton/>
-        <CancelButton/>
+        <ContainedButtonCancel color="error" caption="Cancel" component={Link}to="/health"  />
+        <ContainedButtonMedium color="green" caption="Add" component={Link}to="/health"  />
   
 </div>
     )

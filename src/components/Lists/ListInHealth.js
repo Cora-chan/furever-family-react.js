@@ -1,11 +1,9 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles}  from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import VetButton from "../Buttons/ListInHealthButtons/VetButton"
-import VacinationButton from "../Buttons/ListInHealthButtons/VacinationButton"
-import MedicationsButton from "../Buttons/ListInHealthButtons/MedicationsButton"
-import ConditionsButton from "../Buttons/ListInHealthButtons/ConditionsButton"
+import ContainedButtonLarge from "../Buttons/ContainedButtonLarge"
+import {Link} from "react-router-dom"
 
 
 
@@ -23,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     position:"relative",
     maxHeight:"auto",
     backgroundColor: theme.palette.background.paper,
+    
   },
 }));
 
@@ -33,22 +32,21 @@ export default function ListInHealth() {
 
   return (
     <div className={classes.root} >
-      
-      <List >
+     <List >
         <ListItem  >
-          <VetButton />
+          <ContainedButtonLarge caption="VET" />
         </ListItem>
         <ListItem >
-          <MedicationsButton />
+        <ContainedButtonLarge caption="Vaccination" />
         </ListItem>
         <ListItem >
-          <ConditionsButton />
+          <ContainedButtonLarge caption="Medications" component={Link}to="/manage/meds" />
         </ListItem>
         <ListItem >
-          <VacinationButton />
+          <ContainedButtonLarge caption="Conditions" />
         </ListItem>
-        
       </List>
+      
     </div>
   );
 }

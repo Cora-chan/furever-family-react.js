@@ -4,7 +4,7 @@ import React from "react"
 
 import ImageAvatar from "../components/ImageAvatar"
 import SimpleBottomNavigation from "../components/SimpleBottomNavigation"
-import SettingButton from "../components/SettingButton"
+import SettingButton from "../components/Buttons/SettingButton"
 import ListDividers from "../components/Lists/ListDividers"
 
 function Dashboard(){

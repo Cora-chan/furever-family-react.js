@@ -13,13 +13,15 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
   
-  export default function BackButton() {
+  export default function BackButton(props) {
     const classes = useStyles();
-  
+    const {  to } = props;
+    const CustomLink = props => <Link to={to} {...props} />;
+    
     return (
       <div className={classes.root}>
         <IconButton
-        component={ Link } to="/settings">
+        component={CustomLink}>
           <ArrowBackIcon 
           />
         </IconButton>

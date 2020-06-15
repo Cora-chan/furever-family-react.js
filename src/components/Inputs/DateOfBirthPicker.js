@@ -1,46 +1,36 @@
-import 'date-fns';
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import DateFnsUtils from '@date-io/date-fns';
-import {
-  MuiPickersUtilsProvider,
-  
-  KeyboardDatePicker,
-} from '@material-ui/pickers';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
+
+import TextField from '@material-ui/core/TextField';
+
+const useStyles = makeStyles(() =>
+  createStyles({
+    container: {
+      display: 'flex',
+      flexWrap: 'wrap',
+    },
+    textField: {
+
+      width: 200,
+    },
+  }),
+);
 
 export default function DateOfBirthPicker() {
-  // The first commit of Material-UI
-  const [selectedDate, setSelectedDate] = React.useState(new Date());
-
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
-  };
+  const classes = useStyles();
 
   return (
-    <MuiPickersUtilsProvider utils={DateFnsUtils}>
-      <Grid container justify="space-around" >
-        <KeyboardDatePicker
-          style=
-          {{margin: "20px 40px 0 10px",
-            width:"40ch",
-            boreder:"2px"
-            
+    <form className={classes.container} noValidate>
+      <TextField
+        id="date"
+        label="Date of Birth"
+        type="date"
+        defaultValue=""
+        className={classes.textField}
+        InputLabelProps={{
+          shrink: true,
         }}
-          disableToolbar
-          variant="inline"
-          format="MM/dd/yyyy"
-          margin="normal"
-          
-          id="date-picker-inline"
-          label="Date Of Birth"
-          value={selectedDate}
-          onChange={handleDateChange}
-          KeyboardButtonProps={{
-            'aria-label': 'change date',
-          }}
-        />
-        
-      </Grid>
-    </MuiPickersUtilsProvider>
+      />
+    </form>
   );
 }
