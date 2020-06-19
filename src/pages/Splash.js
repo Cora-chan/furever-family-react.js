@@ -1,6 +1,5 @@
 import React from 'react';
 import "./background.css"
-import ContainedButtonLarge from "../components/Buttons/ContainedButtonLarge" 
 import ContainedButtonLargeFB from "../components/Buttons/ContainedButtonLargeFB"
 import {} from "@material-ui/core"
 
