@@ -5,7 +5,6 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
   root: {
     width: '100%',
-    
     maxWidth: 500,
     padding:"20px 0px 0px 12px",
     textIndent:"5%"

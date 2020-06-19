@@ -7,17 +7,18 @@ import Select from '@material-ui/core/Select';
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
-    //margin: theme.spacing(1),
-    minWidth: 120,
+    margin: "auto",
+      width: "95%",
+      padding: "10px",
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
   },
 }));
 
-export default function BreedSelect() {
+export default function SimpleSelect() {
   const classes = useStyles();
-  const [setAge] = React.useState('');
+  const [age, setAge] = React.useState('');
 
   const handleChange = (event) => {
     setAge(event.target.value);
@@ -25,27 +26,28 @@ export default function BreedSelect() {
 
   return (
     <div>
-      <FormControl className={classes.formControl}>
-        <InputLabel id="demo-simple-select-label" 
-        style=
-        {{margin: "-8px 0px 50px 10px",
-            width:"34ch",}}
-            >Breed</InputLabel>
+      <FormControl variant="outlined" className={classes.formControl}>
+        <InputLabel id="demo-simple-select-outlined-label">Breed</InputLabel>
         <Select
-          
-          style=
-          {{margin: "10px 0px 0px 10px",
-              width:"31ch",}}
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          //value={age}
+          labelId="demo-simple-select-outlined-label"
+          id="demo-simple-select-outlined"
+          value={age}
           onChange={handleChange}
+          label="Age"
         >
-          <MenuItem >Kelpie</MenuItem>
-          <MenuItem >Corgi</MenuItem>
-          <MenuItem >Husky</MenuItem>
+          <MenuItem value="">
+            <em>None</em>
+          </MenuItem>
+          <MenuItem value={10}>aaa</MenuItem>
+          <MenuItem value={20}>bbb</MenuItem>
+          <MenuItem value={30}>ccc</MenuItem>
         </Select>
       </FormControl>
-    </div>
-  );
+      </div>
+  )
 }
+
+
+
+  
+

@@ -1,6 +1,6 @@
 import React from "react"
 import ListInCare from "../components/Lists/ListInCare"
-import CareHeader from "../components/Headers/CareHeader"
+import SimpleHeader from "../components/Headers/SimpleHeader"
 import SettingButton from "../components/Buttons/SettingButton"
 import SimpleBottomNaviagtion from "../components/SimpleBottomNavigation"
 
@@ -10,7 +10,7 @@ function Care(){
 <div>
         
         <SettingButton />
-        <CareHeader />
+        <SimpleHeader caption="Care" />
         
         <ListInCare />
         <SimpleBottomNaviagtion />

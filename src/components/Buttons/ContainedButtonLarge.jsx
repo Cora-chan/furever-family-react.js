@@ -24,6 +24,7 @@ export default function ContainedButtonLarge (props) {
     className={classes.root}
     variant="contained" 
     component={CustomLink}
+    color={props.color}
     >
       {props.caption}
     </Button>

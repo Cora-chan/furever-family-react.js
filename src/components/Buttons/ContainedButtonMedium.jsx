@@ -25,7 +25,7 @@ const MyButton = styled(({ color, ...other }) => <Button {...other} />)({
           padding: '0 30px',
           margin: 8,
           display:"block",
-          marginTop:"100px",
+          marginTop:"40px",
           textAlign:"center",
           fontFamily:"Arial",
           lineHeight:"45px"

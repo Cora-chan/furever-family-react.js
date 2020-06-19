@@ -8,10 +8,12 @@ const useStyles = makeStyles(() =>
     container: {
       display: 'flex',
       flexWrap: 'wrap',
+      margin: "auto",  
+      padding: "10px",
     },
     textField: {
-
-      width: 200,
+      padding: "10px",
+      width: "95%",
     },
   }),
 );

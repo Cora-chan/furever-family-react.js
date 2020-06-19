@@ -1,6 +1,6 @@
 import React from "react"
 import ListInSettings from "../components/Lists/ListInSettings"
-import SettingsHeader from "../components/Headers/SettingsHeader"
+import SimpleHeader from "../components/Headers/SimpleHeader"
 import SettingButton from "../components/Buttons/SettingButton"
 import SimpleBottomNaviagtion from "../components/SimpleBottomNavigation"
 
@@ -10,8 +10,7 @@ function Settings(){
 <div>
         
         <SettingButton />
-        <SettingsHeader />
-        
+        <SimpleHeader caption="Settings" />  
         <ListInSettings />
         <SimpleBottomNaviagtion />
         

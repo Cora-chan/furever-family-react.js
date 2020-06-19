@@ -14,6 +14,7 @@ import InvitationModal from "./components/Modals/InvitationModal"
 import AddPets from "./pages/AddPets"
 import ManagePets from "./pages/ManagePets"
 import ManageMeds from "./pages/ManageMeds"
+import Splash from "./pages/Splash";
 
 
 
@@ -23,6 +24,7 @@ class App extends Component{
 
         return <Router>
             <Switch>
+            <Route exact path="/splash" component={Splash} />
             <Route exact path="/" component={Dashboard} />
             <Route exact path="/health" component={Health} />
             <Route exact path="/care" component={Care} />

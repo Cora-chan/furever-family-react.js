@@ -4,7 +4,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import BreedSelect from "../Inputs/BreedSelect";
 import DateOfBirthPicker from "../Inputs/DateOfBirthPicker";
-import NameTextField from '../Inputs/NameTextField';
+import BasicTextField from "../Inputs/BasicTextField"
 
 
 
@@ -36,7 +36,7 @@ export default function ListInAddPets() {
       
       <List >
         <ListItem  >
-          <NameTextField />
+          <BasicTextField label="Name"/>
         </ListItem>
         <ListItem >
           <DateOfBirthPicker/>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
+import BasicTextField from "../Inputs/BasicTextField"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function InvitationModal() {
+export default function InvitationModal(props) {
   const classes = useStyles();
   const rootRef = React.useRef(null);
 
@@ -61,6 +62,7 @@ export default function InvitationModal() {
         <div className={classes.paper}>
           <h2 id="server-modal-title" style={{color:"#ffffff" }}>Invite Sent</h2>
           <p  id="server-modal-description" style={{color:"#ffffff"}}>Invite successfully sent to</p>
+          <p  id="server-modal-description" style={{color:"#ffffff"}}></p>
         </div>
       </Modal>
     </div>

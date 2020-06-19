@@ -12,7 +12,7 @@ function Health(){
 <div>
         
         <SettingButton />
-        <SimpleHeader />
+        <SimpleHeader caption="Health" />
         <ChartExample  />
         <ListInHealth />
         <SimpleBottomNavigation />

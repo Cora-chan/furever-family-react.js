@@ -18,7 +18,7 @@ const useStyles = makeStyles({
 
 
 
-export default function SimpleHeader() {
+export default function SimpleHeader(props) {
   const classes = useStyles();  
 
 return(
@@ -29,7 +29,7 @@ return(
             fontFamily:"sans-serif"
              
         }} >
-           Health
+           {props.caption}
       </Typography>
     </div>
   );
